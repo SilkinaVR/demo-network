@@ -1,0 +1,13 @@
+.myFrend__title{
+    text-align: center;
+    color: chartreuse;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .myFrend__Items{
+    display: flex;
+  }  
+  .myFrend{
+    display: flex;
+    flex-direction: column;
+  }
