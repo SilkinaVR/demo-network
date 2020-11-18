@@ -1,8 +1,8 @@
 import { authAPI } from "../api/api";
 import { stopSubmit } from 'redux-form'
 
-const SET_USER_DATA = 'SET_USER_DATA';
-const SET_URL = 'SET_URL';
+const SET_USER_DATA = 'auth/SET_USER_DATA';
+const SET_URL = 'auth/SET_URL';
 
 let initialState = {
     userId: null,
@@ -70,7 +70,8 @@ export const logout = () => async (dispatch) => {
 
 }
 export const security = () => async (dispatch) => {
-    let response = authAPI.security();
+
+    let response = await authAPI.security();
     dispatch(setSecutity(response.data.url));
 }
 

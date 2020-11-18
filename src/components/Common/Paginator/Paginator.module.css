@@ -1,3 +1,6 @@
 .selectedPages{
     font-weight: bold;;
 }
+.paginator{
+    margin-left: 50px;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import { Route, withRouter } from 'react-router-dom';
+import { HashRouter, Route, withRouter } from 'react-router-dom';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
@@ -14,7 +14,6 @@ import { connect } from 'react-redux';
 import { initializeApp } from './redux/appReduser';
 import { compose } from 'redux';
 import Preloader from './components/Common/Preloader/Preloader';
-import { BrowserRouter } from 'react-router-dom';
 import store from './redux/reduxStore';
 import { Provider } from 'react-redux';
 import { withSuspense } from './hoc/withSuspense';
@@ -61,11 +60,11 @@ let AppContainer = compose(
 )(App);
 
 let MainApp = (props) => {
-  return <BrowserRouter>
+  return <HashRouter>
     <Provider Provider store={store} >
       <AppContainer />
     </Provider >
-  </BrowserRouter >
+  </HashRouter >
 }
 
 export default MainApp;

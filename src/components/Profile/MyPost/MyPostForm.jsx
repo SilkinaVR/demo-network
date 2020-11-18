@@ -24,8 +24,8 @@ const MyPostReduxForm = reduxForm({ form: 'post' })(MyPostForm);
 
 const PostForm = (props) => {
     const onSubmit = (formData) => {
-        console.log(formData)
-        console.log('formData')
+        // console.log(formData)
+        // console.log('formData')
         props.addMessage(formData.post)
     }
     return (

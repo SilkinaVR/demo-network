@@ -5,18 +5,17 @@ import PostForm from './MyPostForm';
 
 
 const MyPost = React.memo((props) => {
-  // debugger
-  console.log("RENDER");
+
   let addPost = (text) => {
     props.addPost(text);
   }
 
   let postElements = props.posts.map(post => {
-    return <Post message={post.message} count={post.count} />
+    return <Post key={post.id} profile={props.profile} message={post.message} count={post.count} />
   })
   return (
     <div className={s.content}>
-      <div className={s.item}> my post </div>
+      <div className={s.item}> My posts </div>
       <PostForm addMessage={addPost} namebutton={'Add'} placeholder={'Начните ввод'} />
 
       {postElements}
