@@ -7,8 +7,6 @@ const Post = (props) => {
   if (!props.profile) {
     return <Preloader />
 }
-  console.log('MyPost');
-  console.log(props.profile.photos);
   return (
 
       <div className={s.item} >

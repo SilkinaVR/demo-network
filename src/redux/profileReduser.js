@@ -77,10 +77,14 @@ export const getStatus = (id) => async (dispatch) => {
     dispatch(setStatusProfile(response.data));
 }
 export const updateStatus = (status) => async (dispatch) => {
+    try{
     const response = await profileAPI.updateStatus(status)
 
     if (response.data.resultCode === 0)
         dispatch(setStatusProfile(status));
+    }catch(error){
+        //
+    }
 }
 export const setPhoto = (photo) => async (dispatch) => {
     const response = await profileAPI.setPhoto(photo);

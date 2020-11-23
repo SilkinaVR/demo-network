@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     grid-area: h;
     background-color:rebeccapurple;
     display: flex;
@@ -14,8 +15,7 @@
 
 .titllelogin {
     position: absolute;
-    right:5%;
-    
+    right:5%;   
 }
 .titllelogin a{
     color: white;

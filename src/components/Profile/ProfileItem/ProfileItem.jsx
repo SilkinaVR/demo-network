@@ -3,6 +3,7 @@ import s from './ProfileItem.module.css'
 import Preloader from '../../Common/Preloader/Preloader';
 import ProfileStatusWithHook from '../ProfileStatusWithHook';
 import userPhoto from '../../../Images/User.png'
+import cn  from 'classnames'
 
 import ProfileDataFormRedux from './ProfileDataForm';
 
@@ -25,7 +26,7 @@ const ProfileItems = (props) => {
     }
 
     return (
-        <div className={s.profile}>
+        <div className={cn(s.profile, s.profilecolor)}>
             <img className={s.mainPhoto} src={props.profile.photos.large || userPhoto} alt='PhotoUser' />
 
             {props.isOwner &&
